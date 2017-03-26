@@ -1,0 +1,70 @@
+.splash{
+  background: url('https://res.cloudinary.com/deeptailor/image/upload/b_rgb:000,bo_1px_solid_rgb:000,c_scale,e_contrast:44,o_100,w_1800/v1490490092/homebackground1_jixuwi.jpg');
+  background-attachment: fixed;
+  background-position: 0% 60%;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  font-family: 'Maven Pro', sans-serif;
+}
+
+.splash-overlay{
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.splash-main{
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.splash-logo{
+  font-family: 'Sree Krushnadevaraya', serif;
+  font-size: 80px;
+  margin-top: 40px;
+}
+
+.splash-nav{
+  display: flex;
+}
+
+.splash-nav > li{
+  margin: 0 10px
+}
+
+.splash-nav > li:first-child{
+  margin-left: 0;
+}
+
+.splash-nav > li:hover{
+  color: gray;
+  cursor: pointer;
+}
+
+.splash-footer{
+  width: 50px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 40px 0;
+  font-size: 24px;
+}
+
+/*media*/
+
+@media (max-width: 700px){
+  .splash{
+    background: url('https://res.cloudinary.com/deeptailor/image/upload/q_100/v1490495605/prin2_ya6sml.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+  }
+}
