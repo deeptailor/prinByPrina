@@ -63,7 +63,7 @@
   .splash{
     background: url('https://res.cloudinary.com/deeptailor/image/upload/q_100/v1490495605/prin2_ya6sml.jpg');
     background-attachment: fixed;
-    background-position: center;
+    background-position: left;
     background-repeat: none;
     background-size: cover;
   }
