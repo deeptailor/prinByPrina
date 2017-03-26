@@ -67,4 +67,25 @@
     background-repeat: none;
     background-size: cover;
   }
+  .splash-main{
+    align-items: center;
+  }
+  .splash-logo{
+    font-size: 100px;
+  }
+  .splash-nav{
+    flex-direction: column;
+    font-size: 40px;
+  }
+  .splash-nav > li{
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .splash-nav > li:first-child{
+    margin-left: 10px;
+  }
+  .splash-footer{
+    width: 40%;
+    font-size: 40px;
+  }
 }
