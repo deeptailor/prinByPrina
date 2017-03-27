@@ -25253,6 +25253,10 @@ var _splash = __webpack_require__(220);
 
 var _splash2 = _interopRequireDefault(_splash);
 
+var _navigation = __webpack_require__(272);
+
+var _navigation2 = _interopRequireDefault(_navigation);
+
 var _carousel = __webpack_require__(279);
 
 var _carousel2 = _interopRequireDefault(_carousel);
@@ -25269,6 +25273,7 @@ var Root = function Root() {
     _react2.default.createElement(
       _reactRouter.Route,
       { path: '/main', component: _app2.default },
+      _react2.default.createElement(_reactRouter.Route, { path: '/main', component: _navigation2.default }),
       _react2.default.createElement(_reactRouter.Route, { path: 'ss17', component: function component() {
           return _react2.default.createElement(_carousel2.default, { images: _images.ss17Line });
         } })
@@ -29042,8 +29047,6 @@ var _react = __webpack_require__(80);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouter = __webpack_require__(258);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -29061,82 +29064,84 @@ var Navigation = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (Navigation.__proto__ || Object.getPrototypeOf(Navigation)).call(this, props));
 
     _this.urlPush = _this.urlPush.bind(_this);
-    console.log(_reactRouter.browserHistory);
+    console.log(props);
     return _this;
   }
 
   _createClass(Navigation, [{
-    key: 'urlPush',
+    key: "urlPush",
     value: function urlPush(name) {
+      var _this2 = this;
+
       return function (e) {
-        return _reactRouter.browserHistory.push(name);
+        return _this2.props.router.push(name);
       };
     }
   }, {
-    key: 'render',
+    key: "render",
     value: function render() {
       return _react2.default.createElement(
-        'div',
-        { className: 'navigation' },
+        "div",
+        { className: "navigation" },
         _react2.default.createElement(
-          'div',
-          { className: 'navigation-outer' },
+          "div",
+          { className: "navigation-outer" },
           _react2.default.createElement(
-            'div',
-            { className: 'navigation-main' },
+            "div",
+            { className: "navigation-main" },
             _react2.default.createElement(
-              'ul',
-              { className: 'navigation-list' },
+              "ul",
+              { className: "navigation-list" },
               _react2.default.createElement(
-                'li',
+                "li",
                 { onClick: this.urlPush('/') },
-                'HOME'
+                "HOME"
               ),
               _react2.default.createElement(
-                'li',
+                "li",
                 { onClick: this.urlPush('/main/ss17') },
-                'SS17'
+                "SS17"
               ),
               _react2.default.createElement(
-                'li',
+                "li",
                 null,
-                'FF16'
+                "FF16"
               ),
               _react2.default.createElement(
-                'li',
+                "li",
                 null,
-                'SHOP'
+                "SHOP"
               ),
               _react2.default.createElement(
-                'li',
+                "li",
                 null,
-                'PRESS'
+                "PRESS"
               ),
               _react2.default.createElement(
-                'li',
+                "li",
                 null,
-                'ABOUT'
+                "ABOUT"
               ),
               _react2.default.createElement(
-                'li',
+                "li",
                 null,
                 _react2.default.createElement(
-                  'a',
+                  "a",
                   null,
-                  _react2.default.createElement('i', { className: 'fa fa-facebook-official', 'aria-hidden': 'true' })
+                  _react2.default.createElement("i", { className: "fa fa-facebook-official", "aria-hidden": "true" })
                 ),
                 _react2.default.createElement(
-                  'a',
+                  "a",
                   null,
-                  _react2.default.createElement('i', { className: 'fa fa-instagram', 'aria-hidden': 'true' })
+                  _react2.default.createElement("i", { className: "fa fa-instagram", "aria-hidden": "true" })
                 )
               )
             )
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'navigation-logo', onClick: this.urlPush('/') },
-            'PRIN'
+            "div",
+            { className: "navigation-logo", onClick: this.urlPush('/') },
+            "PRIN"
           )
         )
       );
@@ -31546,13 +31551,12 @@ var _navigation2 = _interopRequireDefault(_navigation);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var App = function App(_ref) {
-  var children = _ref.children;
+var App = function App(props) {
   return _react2.default.createElement(
     'div',
     { className: 'app-container' },
-    _react2.default.createElement(_navigation2.default, null),
-    children
+    _react2.default.createElement(_navigation2.default, { router: props.router }),
+    props.children
   );
 };
 

@@ -1,16 +1,15 @@
 import React from 'react';
-import { browserHistory } from 'react-router';
 
 class Navigation extends React.Component{
   constructor(props){
     super(props);
     this.urlPush = this.urlPush.bind(this);
-    console.log(browserHistory);
+    console.log(props);
   }
 
   urlPush(name){
     return (e) => (
-      browserHistory.push(name)
+      this.props.router.push(name)
     )
   }
 

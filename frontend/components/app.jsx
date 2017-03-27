@@ -2,10 +2,10 @@ import React from 'react';
 import Navigation from './navigation.jsx';
 
 
-const App = ({ children }) => (
+const App = (props) => (
   <div className="app-container">
-    <Navigation/>
-    {children}
+    <Navigation router={props.router}/>
+    {props.children}
   </div>
 );
 
