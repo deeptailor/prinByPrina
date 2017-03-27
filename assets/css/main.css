@@ -246,11 +246,12 @@
   }
 
   .carousel-image > img{
-    height: 60vh;
+    max-height: 60vw;
+    max-width: 95vw;
   }
 
   .slick-dots{
-    top: 65vh;
+    top: 55vh;
     width: 60vw;
   }
 }
