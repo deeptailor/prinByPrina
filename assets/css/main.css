@@ -182,7 +182,6 @@
 }
 
 .slick-dots{
-  background: white;
   width: 50%;
   height: 20px;
   border-radius: 10px;
@@ -225,5 +224,14 @@
   .splash-footer{
     width: 40%;
     font-size: 40px;
+  }
+
+  .carousel-image > img{
+    height: 90vh;
+  }
+
+  .slick-dots{
+    top: 95vh;
+    width: 60vw;
   }
 }
