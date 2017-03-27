@@ -29954,16 +29954,49 @@ var Carousel = function (_React$Component) {
   function Carousel(props) {
     _classCallCheck(this, Carousel);
 
-    return _possibleConstructorReturn(this, (Carousel.__proto__ || Object.getPrototypeOf(Carousel)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (Carousel.__proto__ || Object.getPrototypeOf(Carousel)).call(this, props));
+
+    _this.openModal = _this.openModal.bind(_this);
+    _this.closeModal = _this.closeModal.bind(_this);
+    _this.state = { isModalOpen: false, imageUrl: '' };
+    return _this;
   }
 
   _createClass(Carousel, [{
+    key: 'openModal',
+    value: function openModal(src) {
+      var _this2 = this;
+
+      return function () {
+        _this2.setState({ isModalOpen: true, imageUrl: src });
+      };
+    }
+  }, {
+    key: 'closeModal',
+    value: function closeModal(e) {
+      e.stopPropagation();
+      this.setState({ isModalOpen: false, imageUrl: '' });
+    }
+  }, {
+    key: 'renderModal',
+    value: function renderModal() {
+      if (this.state.isModalOpen) {
+        return _react2.default.createElement(
+          'div',
+          { className: 'modal-container', onClick: this.closeModal },
+          _react2.default.createElement('img', { src: this.state.imageUrl })
+        );
+      }
+    }
+  }, {
     key: 'renderImages',
     value: function renderImages() {
+      var _this3 = this;
+
       return this.props.images.map(function (e, i) {
         return _react2.default.createElement(
           'div',
-          { key: 'image-' + i, className: 'carousel-image' },
+          { key: 'image-' + i, onClick: _this3.openModal(e), className: 'carousel-image' },
           _react2.default.createElement('img', { src: e })
         );
       });
@@ -29975,7 +30008,7 @@ var Carousel = function (_React$Component) {
         infinite: true,
         lazyLoad: true,
         speed: 500,
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 1,
         adaptiveHeight: true,
         variableWidth: true
@@ -29983,12 +30016,17 @@ var Carousel = function (_React$Component) {
 
       return _react2.default.createElement(
         'div',
-        { className: 'carousel-container' },
+        null,
         _react2.default.createElement(
-          _reactSlick2.default,
-          _extends({ className: 'carousel-outer' }, settings),
-          this.renderImages()
-        )
+          'div',
+          { className: 'carousel-container' },
+          _react2.default.createElement(
+            _reactSlick2.default,
+            _extends({ className: 'carousel-outer' }, settings),
+            this.renderImages()
+          )
+        ),
+        this.renderModal()
       );
     }
   }]);
