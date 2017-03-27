@@ -22,6 +22,11 @@ class Carousel extends React.Component{
       adaptiveHeight: true,
       variableWidth: true,
     }
+
+    if(window.screen.orientation.type === 'portrait-primary'){
+      settings.slidesToShow = 1;
+    }
+    
     return (
     	<div className='carousel-container'>
       	<Slider className="carousel-outer" {...settings}>

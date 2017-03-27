@@ -4,7 +4,6 @@ class Navigation extends React.Component{
   constructor(props){
     super(props);
     this.urlPush = this.urlPush.bind(this);
-    console.log(props);
   }
 
   urlPush(name){

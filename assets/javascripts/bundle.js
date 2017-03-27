@@ -29064,7 +29064,6 @@ var Navigation = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (Navigation.__proto__ || Object.getPrototypeOf(Navigation)).call(this, props));
 
     _this.urlPush = _this.urlPush.bind(_this);
-    console.log(props);
     return _this;
   }
 
@@ -29981,6 +29980,11 @@ var Carousel = function (_React$Component) {
         adaptiveHeight: true,
         variableWidth: true
       };
+
+      if (window.screen.orientation.type === 'portrait-primary') {
+        settings.slidesToShow = 1;
+      }
+
       return _react2.default.createElement(
         'div',
         { className: 'carousel-container' },
