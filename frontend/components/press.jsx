@@ -1,5 +1,4 @@
 import React from 'react';
-import Instafeed from 'instafeed.js';
 
 import {userId, accessToken} from '../data/images.jsx';
 
@@ -7,21 +6,16 @@ class Press extends React.Component{
   constructor(props){
     super(props);
   }
-  componentDidMount(){
-    console.log(props);
-    // var feed = new Instafeed({
-    //   target: 'instafeed',
-    //   get: 'tagged',
-    //   tagName: 'prinbyprina',
-    //   userId: userId,
-    //   accessToken: accessToken
-    // });
-    // feed.run();
-  }
 
   render(){
     return(
-      <a href="https://www.instagram.com/oauth/authorize/?client_id=a57ca496932f44d49cda32c6913bf033&redirect_uri=REDIRECT-URI&response_type=token">click me</a>
+      <ul className="press-container">
+        <li><iframe width="560" height="315" src="https://www.youtube.com/embed/A_dO8GSTCLs" frameBorder="0" allowFullScreen></iframe></li>
+        <li><iframe width="560" height="315" src="https://www.youtube.com/embed/ZwzSnO4Ni2U" frameBorder="0" allowFullScreen></iframe></li>
+        <li><iframe width="560" height="315" src="https://www.youtube.com/embed/_Gyri-7cKns" frameBorder="0" allowFullScreen></iframe></li>
+        <li><iframe width="560" height="315" src="https://www.youtube.com/embed/Pmpo8yC5Q60" frameBorder="0" allowFullScreen></iframe></li>
+        <li><iframe width="560" height="315" src="https://www.youtube.com/embed/d60oHJnyqmI" frameBorder="0" allowFullScreen></iframe></li>
+      </ul>
     );
   }
 }

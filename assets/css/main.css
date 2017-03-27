@@ -192,6 +192,19 @@
   top: 55vh;
 }
 
+.press-container{
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.press-container > li{
+  padding: 30px;
+}
+
 
 /*media*/
 

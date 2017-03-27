@@ -22,7 +22,7 @@ class Navigation extends React.Component{
               <li onClick={this.urlPush('/main/ss17')}>SS17</li>
               <li onClick={this.urlPush('/main/ff16')}>FF16</li>
               <li>SHOP</li>
-              <li>PRESS</li>
+              <li onClick={this.urlPush('/main/press')}>PRESS</li>
               <li>ABOUT</li>
               <li>
                 <a><i className="fa fa-facebook-official" aria-hidden="true"></i></a>
