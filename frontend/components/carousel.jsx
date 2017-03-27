@@ -9,6 +9,10 @@ class Carousel extends React.Component{
     this.state = {isModalOpen: false, imageUrl:''};
   }
 
+  stopPropagation(e){
+    e.stopPropagation();
+  }
+
   openModal(src){
     return () => {
       this.setState({isModalOpen: true, imageUrl: src})
@@ -24,7 +28,7 @@ class Carousel extends React.Component{
     if(this.state.isModalOpen){
       return(
         <div className="modal-container" onClick={this.closeModal}>
-          <img src={this.state.imageUrl}></img>
+          <img src={this.state.imageUrl} onClick={this.stopPropagation}></img>
         </div>
       )
     }
@@ -42,7 +46,7 @@ class Carousel extends React.Component{
       infinite: true,
       lazyLoad: false,
       speed: 500,
-      slidesToShow: 3,
+      slidesToShow: 1,
       slidesToScroll: 1,
       swipeToSlide: true,
       touchMove: true,

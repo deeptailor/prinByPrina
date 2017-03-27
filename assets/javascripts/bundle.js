@@ -29081,7 +29081,8 @@ var Navigation = function (_React$Component) {
       var _this2 = this;
 
       return function (e) {
-        return _this2.props.router.push(name);
+        e.stopPropagation();
+        _this2.props.router.push(name);
       };
     }
   }, {
@@ -29147,8 +29148,12 @@ var Navigation = function (_React$Component) {
           ),
           _react2.default.createElement(
             "div",
-            { className: "navigation-logo", onClick: this.urlPush('/') },
-            "PRIN"
+            { className: "navigation-logo" },
+            _react2.default.createElement(
+              "h1",
+              { onClick: this.urlPush('/') },
+              "PRIN"
+            )
           )
         )
       );
@@ -29971,6 +29976,11 @@ var Carousel = function (_React$Component) {
   }
 
   _createClass(Carousel, [{
+    key: 'stopPropagation',
+    value: function stopPropagation(e) {
+      e.stopPropagation();
+    }
+  }, {
     key: 'openModal',
     value: function openModal(src) {
       var _this2 = this;
@@ -29992,7 +30002,7 @@ var Carousel = function (_React$Component) {
         return _react2.default.createElement(
           'div',
           { className: 'modal-container', onClick: this.closeModal },
-          _react2.default.createElement('img', { src: this.state.imageUrl })
+          _react2.default.createElement('img', { src: this.state.imageUrl, onClick: this.stopPropagation })
         );
       }
     }
@@ -30017,7 +30027,7 @@ var Carousel = function (_React$Component) {
         infinite: true,
         lazyLoad: false,
         speed: 500,
-        slidesToShow: 3,
+        slidesToShow: 1,
         slidesToScroll: 1,
         swipeToSlide: true,
         touchMove: true,
@@ -31623,7 +31633,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 var ss17Line = exports.ss17Line = ["https://res.cloudinary.com/deeptailor/image/upload/v1490572093/prin/ss17/1_kxvzgn.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490572095/prin/ss17/2_titahs.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490572095/prin/ss17/3_frf8ok.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490572095/prin/ss17/4_l410mq.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490572096/prin/ss17/5_drofn0.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490572096/prin/ss17/6_hv0w8p.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490572096/prin/ss17/7_cjwgkk.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490572096/prin/ss17/8_pagh05.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490572096/prin/ss17/9_ii3la0.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490572093/prin/ss17/10_qmya3y.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490572093/prin/ss17/11_rcxwdb.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490572093/prin/ss17/12_ey2prt.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490572093/prin/ss17/13_cuvmsq.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490572093/prin/ss17/14_sigwzg.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490572094/prin/ss17/15_ue1wwd.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490572095/prin/ss17/16_iousuc.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490572095/prin/ss17/17_f7aqub.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490572095/prin/ss17/18_cuihzp.jpg"];
 
-var ff16Line = exports.ff16Line = ["https://res.cloudinary.com/deeptailor/image/upload/v1490578340/prin/ff16/1.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490578340/prin/ff16/2.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490572095/prin/ff16/3.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490572095/prin/ff16/4.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490572096/prin/ff16/5.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490572096/prin/ff16/6.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490572096/prin/ff16/7.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490572096/prin/ff16/8.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490572096/prin/ff16/9.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490572093/prin/ff16/10.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490572093/prin/ff16/11.jpg"];
+var ff16Line = exports.ff16Line = ["https://res.cloudinary.com/deeptailor/image/upload/v1490578340/prin/ff16/1.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490578340/prin/ff16/2.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490572095/prin/ff16/3.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490572095/prin/ff16/4.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490572096/prin/ff16/5.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490572096/prin/ff16/6.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490572096/prin/ff16/7.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490572096/prin/ff16/8.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490572096/prin/ff16/9.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490572093/prin/ff16/10.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490572093/prin/ff16/11.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490572093/prin/ff16/12.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490572093/prin/ff16/13.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490572093/prin/ff16/14.jpg", "https://res.cloudinary.com/deeptailor/image/upload/v1490572093/prin/ff16/15.jpg"];
 
 var userId = exports.userId = "174572098";
 var accessToken = exports.accessToken = "174572098.1677ed0.9565b4677f0c46fe9b21a7c61df0571c";

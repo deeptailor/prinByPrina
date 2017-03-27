@@ -137,6 +137,10 @@
   font-size: 80px;
 }
 
+.navigation-logo > h1{
+  width: 40px;
+}
+
 /*Carousel*/
 
 .carousel-container{
@@ -192,11 +196,14 @@
   top: 55vh;
 }
 
+/*press*/
+
 .press-container{
   margin-top: 30px;
   width: 100%;
   display: flex;
-  flex-direction: column;
+  padding: 15px;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }

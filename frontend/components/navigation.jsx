@@ -7,9 +7,10 @@ class Navigation extends React.Component{
   }
 
   urlPush(name){
-    return (e) => (
+    return (e) => {
+      e.stopPropagation();
       this.props.router.push(name)
-    )
+    }
   }
 
   render(){
@@ -30,8 +31,8 @@ class Navigation extends React.Component{
               </li>
             </ul>
           </div>
-          <div className="navigation-logo" onClick={this.urlPush('/')}>
-            PRIN
+          <div className="navigation-logo">
+            <h1 onClick={this.urlPush('/')}>PRIN</h1>
           </div>
         </div>
       </div>
