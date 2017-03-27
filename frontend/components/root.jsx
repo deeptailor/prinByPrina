@@ -7,7 +7,7 @@ import Splash from './splash.jsx';
 import Navigation from './navigation.jsx';
 import Carousel from './carousel.jsx';
 
-import { ss17Line } from '../data/images.jsx'
+import { ss17Line, ff16Line } from '../data/images.jsx'
 
 const Root = () => (
   <Router history={ hashHistory }>
@@ -15,6 +15,7 @@ const Root = () => (
     <Route path='/main' component={App}>
       <Route path="/main" component={Navigation}></Route>
       <Route path='ss17' component={() => (<Carousel images={ss17Line}/>)}></Route>
+      <Route path='ff16' component={() => (<Carousel images={ff16Line}/>)}></Route>
     </Route>
   </Router>
 );

@@ -18,3 +18,17 @@ export const ss17Line = [
   "https://res.cloudinary.com/deeptailor/image/upload/v1490572095/prin/ss17/17_f7aqub.jpg",
   "https://res.cloudinary.com/deeptailor/image/upload/v1490572095/prin/ss17/18_cuihzp.jpg"
 ];
+
+export const ff16Line = [
+  "https://res.cloudinary.com/deeptailor/image/upload/v1490578340/prin/ff16/1.jpg",
+  "https://res.cloudinary.com/deeptailor/image/upload/v1490578340/prin/ff16/2.jpg",
+  "https://res.cloudinary.com/deeptailor/image/upload/v1490572095/prin/ff16/3.jpg",
+  "https://res.cloudinary.com/deeptailor/image/upload/v1490572095/prin/ff16/4.jpg",
+  "https://res.cloudinary.com/deeptailor/image/upload/v1490572096/prin/ff16/5.jpg",
+  "https://res.cloudinary.com/deeptailor/image/upload/v1490572096/prin/ff16/6.jpg",
+  "https://res.cloudinary.com/deeptailor/image/upload/v1490572096/prin/ff16/7.jpg",
+  "https://res.cloudinary.com/deeptailor/image/upload/v1490572096/prin/ff16/8.jpg",
+  "https://res.cloudinary.com/deeptailor/image/upload/v1490572096/prin/ff16/9.jpg",
+  "https://res.cloudinary.com/deeptailor/image/upload/v1490572093/prin/ff16/10.jpg",
+  "https://res.cloudinary.com/deeptailor/image/upload/v1490572093/prin/ff16/11.jpg"
+];

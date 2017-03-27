@@ -20,7 +20,7 @@ class Navigation extends React.Component{
             <ul className="navigation-list">
               <li onClick={this.urlPush('/')}>HOME</li>
               <li onClick={this.urlPush('/main/ss17')}>SS17</li>
-              <li>FF16</li>
+              <li onClick={this.urlPush('/main/ff16')}>FF16</li>
               <li>SHOP</li>
               <li>PRESS</li>
               <li>ABOUT</li>
