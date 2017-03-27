@@ -29981,10 +29981,6 @@ var Carousel = function (_React$Component) {
         variableWidth: true
       };
 
-      if (window.screen.orientation.type === 'portrait-primary') {
-        settings.slidesToShow = 1;
-      }
-
       return _react2.default.createElement(
         'div',
         { className: 'carousel-container' },
