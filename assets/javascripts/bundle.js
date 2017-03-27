@@ -30014,6 +30014,7 @@ var Carousel = function (_React$Component) {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
+        swipeToSlide: true,
         touchMove: true,
         adaptiveHeight: true,
         variableWidth: true
