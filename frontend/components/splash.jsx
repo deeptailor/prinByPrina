@@ -3,6 +3,13 @@ import React from 'react';
 class Splash extends React.Component{
   constructor(props){
     super(props);
+    this.urlPush = this.urlPush.bind(this);
+  }
+
+  urlPush(name){
+    return (e) => (
+      this.props.router.push(name)
+    )
   }
 
 
@@ -15,14 +22,14 @@ class Splash extends React.Component{
               <h1>PRIN</h1>
             </div>
             <ul className="splash-nav">
-              <li>SS17</li>
-              <li>SHOP</li>
-              <li>ABOUT</li>
-              <li>PRESS</li>
+              <li onClick={this.urlPush('/main/ss17')}>SS17</li>
+              <li onClick={this.urlPush('/main/shop')}>SHOP</li>
+              <li onClick={this.urlPush('/main/about')}>ABOUT</li>
+              <li onClick={this.urlPush('/main/press')}>PRESS</li>
             </ul>
             <div className="splash-footer">
-              <i className="fa fa-facebook-square" aria-hidden="true"></i>
-              <i className="fa fa-instagram" aria-hidden="true"></i>
+              <a><i className="fa fa-facebook-official" aria-hidden="true"></i></a>
+              <a><i className="fa fa-instagram" aria-hidden="true"></i></a>
             </div>
           </div>
         </div>
