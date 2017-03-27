@@ -32,3 +32,6 @@ export const ff16Line = [
   "https://res.cloudinary.com/deeptailor/image/upload/v1490572093/prin/ff16/10.jpg",
   "https://res.cloudinary.com/deeptailor/image/upload/v1490572093/prin/ff16/11.jpg"
 ];
+
+export const userId = "174572098";
+export const accessToken = "174572098.1677ed0.9565b4677f0c46fe9b21a7c61df0571c";
