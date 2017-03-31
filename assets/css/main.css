@@ -164,7 +164,7 @@
   min-height: 100vh;
   max-width: 100vw;
   max-height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   display: flex;
@@ -175,9 +175,61 @@
   overflow: hidden;
 }
 
-.modal-container > img{
+.modal-inner-container{
+  position: relative;
+}
+
+.modal-image{
   max-height: 90vh;
   max-width: 90vw;
+}
+
+.modal-image-overlay{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  z-index: 1001;
+}
+
+.modal-direction{
+  height: 100%;
+  width: 50%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  color: black;
+  font-size: 24px;
+}
+
+.modal-direction:nth-child(1):hover .fa-chevron-left{
+  cursor: pointer;
+  visibility: visible;
+}
+
+.modal-direction:nth-child(2):hover .fa-chevron-right{
+  cursor: pointer;
+  visibility: visible;
+}
+
+.fa-chevron-left{
+  position: absolute;
+  left: 20px;
+  visibility: hidden;
+  padding: 5px 10px 5px 5px;
+  background: rgba(255,255,255,0.7);
+  border-radius: 100%;
+}
+
+.fa-chevron-right{
+  position: absolute;
+  right: 20px;
+  visibility: hidden;
+  padding: 5px 5px 5px 10px;
+  background: rgba(255,255,255,0.7);
+  border-radius: 100%;
 }
 
 .slick-arrow{

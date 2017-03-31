@@ -22,6 +22,8 @@ class Navigation extends React.Component{
               <li onClick={this.urlPush('/')}>HOME</li>
               <li onClick={this.urlPush('/main/ss17')}>SS17</li>
               <li onClick={this.urlPush('/main/ff16')}>FF16</li>
+              <li onClick={this.urlPush('/main/ss15')}>SS15</li>
+              <li onClick={this.urlPush('/main/ff15')}>FF15</li>
               <li>SHOP</li>
               <li onClick={this.urlPush('/main/press')}>PRESS</li>
               <li>ABOUT</li>
