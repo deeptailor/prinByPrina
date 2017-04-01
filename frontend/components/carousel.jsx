@@ -51,8 +51,8 @@ class Carousel extends React.Component{
       return(
         <div className="modal-container" onClick={this.closeModal}>
           <div className="modal-inner-container">
-            <img className="modal-image" src={this.state.imageUrl}></img>
-            <div className="modal-image-overlay">
+            <img className="modal-image noselect" src={this.state.imageUrl}></img>
+            <div className="modal-image-overlay noselect">
               <div className="modal-direction" onClick={this.prevPicture}><i className="fa fa-chevron-left" aria-hidden="true"></i></div>
               <div className="modal-direction" onClick={this.nextPicture}><i className="fa fa-chevron-right" aria-hidden="true"></i></div>
             </div>

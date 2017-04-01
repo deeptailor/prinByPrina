@@ -14096,10 +14096,10 @@ var Carousel = function (_React$Component) {
           _react2.default.createElement(
             'div',
             { className: 'modal-inner-container' },
-            _react2.default.createElement('img', { className: 'modal-image', src: this.state.imageUrl }),
+            _react2.default.createElement('img', { className: 'modal-image noselect', src: this.state.imageUrl }),
             _react2.default.createElement(
               'div',
-              { className: 'modal-image-overlay' },
+              { className: 'modal-image-overlay noselect' },
               _react2.default.createElement(
                 'div',
                 { className: 'modal-direction', onClick: this.prevPicture },
