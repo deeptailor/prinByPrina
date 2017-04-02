@@ -18,7 +18,7 @@ class Shop extends React.Component{
   render(){
     return(
       <div className="products-container">
-        <div id='collection-component-59db89b8986'></div>
+        <div id='collection-component-424ce9c77e8'></div>
       </div>
     )
   }

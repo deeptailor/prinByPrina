@@ -287,7 +287,8 @@
 /*shop*/
 
 .products-container{
-  margin-top: 50px;
+  width: 80%;
+  margin: 50px auto 0 auto;
 }
 
 

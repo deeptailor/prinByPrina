@@ -11,19 +11,36 @@ const shopifyOptions = {
 "styles": {
 "product": {
 "@media (min-width: 601px)": {
-  "max-width": "calc(33.33333% - 30px)",
-  "margin-left": "30px",
+  "max-width": "calc(25% - 20px)",
+  "margin-left": "20px",
   "margin-bottom": "50px"
 }
 },
 "button": {
 "background-color": "#000000",
+"padding-left": "20px",
+"padding-right": "20px",
 ":hover": {
   "background-color": "#000000"
 },
+"border-radius": "5px",
 ":focus": {
   "background-color": "#000000"
 }
+},
+"variantTitle": {
+"font-weight": "normal"
+},
+"description": {
+"font-weight": "normal"
+},
+"price": {
+"font-weight": "normal"
+},
+"compareAt": {
+"font-family": "Helvetica Neue, sans-serif",
+"font-weight": "normal",
+"font-size": "11.9px"
 }
 }
 },
@@ -37,6 +54,7 @@ const shopifyOptions = {
 ":hover": {
   "background-color": "#000000"
 },
+"border-radius": "5px",
 ":focus": {
   "background-color": "#000000"
 }
@@ -65,12 +83,28 @@ const shopifyOptions = {
 },
 "button": {
 "background-color": "#000000",
+"padding-left": "20px",
+"padding-right": "20px",
 ":hover": {
   "background-color": "#000000"
 },
+"border-radius": "5px",
 ":focus": {
   "background-color": "#000000"
 }
+},
+"variantTitle": {
+"font-weight": "normal"
+},
+"description": {
+"font-weight": "normal"
+},
+"price": {
+"font-weight": "normal"
+},
+"compareAt": {
+"font-family": "Helvetica Neue, sans-serif",
+"font-weight": "normal"
 }
 }
 },
@@ -100,7 +134,7 @@ const shopifyOptions = {
 "styles": {
 "products": {
 "@media (min-width: 601px)": {
-  "margin-left": "-30px"
+  "margin-left": "-20px"
 }
 }
 }
@@ -137,10 +171,10 @@ export const shopifyInit = (function () {
     ShopifyBuy.UI.onReady(client).then(function (ui) {
       ui.createComponent('collection', {
         id: 381014726,
-        node: document.getElementById('collection-component-59db89b8986'),
+        node: document.getElementById('collection-component-424ce9c77e8'),
         moneyFormat: '%24%7B%7Bamount%7D%7D',
         options: shopifyOptions
       });
     });
   }
-})
+});
