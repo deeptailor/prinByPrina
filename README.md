@@ -44,9 +44,12 @@ User testing was carried out to fine tune the design of the website.
 
 The website is designed with media queries to change the look and feel of the website when users are browsing from non desktop devices.
 
+![PrinByPrina mobile homepage page: http://www.deeptailor.com/prinByPrina/#/][mobile]
+
 [prodlink]: http://deeptailor.com/prinByPrina/#/
 [home page]: ./docs/screenshots/homepage-screenshot.jpeg "PrinByPrina home page"
 [carousel]: ./docs/screenshots/carousel-screenshot.jpeg "PrinByPrina Carousel"
 [modal]: ./docs/screenshots/modal-screenshot.jpeg "PrinByPrina Modal"
 [shop]: ./docs/screenshots/shop-screenshot.jpeg "PrinByPrina shop page"
 [cart]: ./docs/screenshots/cart-screenshot.jpeg "PrinByPrina cart"
+[mobile]: ./docs/screenshots/mobile-homepage-screenshot-mockup.png "PrinByPrina mobile"
