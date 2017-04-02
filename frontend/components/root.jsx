@@ -10,7 +10,6 @@ import Press from './press.jsx';
 import Shop from './shop.jsx';
 
 import { ss17Line, ff16Line, ss15Line, ff15Line } from '../data/images.jsx';
-import { shopLineFF16 } from '../data/products.jsx';
 
 const Root = () => (
   <Router history={ hashHistory }>
@@ -22,7 +21,7 @@ const Root = () => (
       <Route path='ss15' component={() => (<Carousel images={ss15Line}/>)}></Route>
       <Route path='ff15' component={() => (<Carousel images={ff15Line}/>)}></Route>
       <Route path='press' component={Press}></Route>
-      <Route path='shop' component={() => (<Shop products={shopLineFF16}/>)}></Route>
+      <Route path='shop' component={Shop}></Route>
     </Route>
   </Router>
 );
