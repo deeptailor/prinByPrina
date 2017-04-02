@@ -1,14 +1,16 @@
+import React from 'react';
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import { Provider } from 'react-redux';
-import React from 'react';
 
 import App from './app.jsx'
 import Splash from './splash.jsx';
 import Navigation from './navigation.jsx';
 import Carousel from './carousel.jsx';
 import Press from './press.jsx';
+import Shop from './shop.jsx';
 
-import { ss17Line, ff16Line, ss15Line, ff15Line } from '../data/images.jsx'
+import { ss17Line, ff16Line, ss15Line, ff15Line } from '../data/images.jsx';
+import { shopLineFF16 } from '../data/products.jsx';
 
 const Root = () => (
   <Router history={ hashHistory }>
@@ -20,6 +22,7 @@ const Root = () => (
       <Route path='ss15' component={() => (<Carousel images={ss15Line}/>)}></Route>
       <Route path='ff15' component={() => (<Carousel images={ff15Line}/>)}></Route>
       <Route path='press' component={Press}></Route>
+      <Route path='shop' component={() => (<Shop products={shopLineFF16}/>)}></Route>
     </Route>
   </Router>
 );
