@@ -22,8 +22,7 @@ class Splash extends React.Component{
               <h1>PRIN</h1>
             </div>
             <ul className="splash-nav">
-              <li onClick={this.urlPush('/main/ss17')}>COLLECTIONS</li>
-              <li onClick={this.urlPush('/main/shop')}>SHOP</li>
+              <li onClick={this.urlPush('/main/ss16')}>COLLECTIONS</li>
               <li onClick={this.urlPush('/main/about')}>ABOUT</li>
               <li onClick={this.urlPush('/main/press')}>PRESS</li>
             </ul>

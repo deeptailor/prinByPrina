@@ -8918,16 +8918,6 @@ var Navigation = function (_React$Component) {
               ),
               _react2.default.createElement(
                 "li",
-                { onClick: this.urlPush('/main/ss17') },
-                "SS17"
-              ),
-              _react2.default.createElement(
-                "li",
-                { onClick: this.urlPush('/main/ff16') },
-                "FF16"
-              ),
-              _react2.default.createElement(
-                "li",
                 { onClick: this.urlPush('/main/ss15') },
                 "SS15"
               ),
@@ -8938,8 +8928,13 @@ var Navigation = function (_React$Component) {
               ),
               _react2.default.createElement(
                 "li",
-                { onClick: this.urlPush('/main/shop') },
-                "SHOP"
+                { onClick: this.urlPush('/main/ss16') },
+                "SS16"
+              ),
+              _react2.default.createElement(
+                "li",
+                { onClick: this.urlPush('/main/ff16') },
+                "FF16"
               ),
               _react2.default.createElement(
                 "li",
@@ -8948,7 +8943,7 @@ var Navigation = function (_React$Component) {
               ),
               _react2.default.createElement(
                 "li",
-                null,
+                { onClick: this.urlPush('/main/about') },
                 "ABOUT"
               ),
               _react2.default.createElement(
@@ -13934,6 +13929,10 @@ var _shop = __webpack_require__(134);
 
 var _shop2 = _interopRequireDefault(_shop);
 
+var _about = __webpack_require__(300);
+
+var _about2 = _interopRequireDefault(_about);
+
 var _images = __webpack_require__(78);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -13947,20 +13946,21 @@ var Root = function Root() {
       _reactRouter.Route,
       { path: '/main', component: _app2.default },
       _react2.default.createElement(_reactRouter.Route, { path: '/main', component: _navigation2.default }),
-      _react2.default.createElement(_reactRouter.Route, { path: 'ss17', component: function component() {
+      _react2.default.createElement(_reactRouter.Route, { path: 'ss15', component: function component() {
           return _react2.default.createElement(_carousel2.default, { images: _images.ss17Line });
         } }),
-      _react2.default.createElement(_reactRouter.Route, { path: 'ff16', component: function component() {
+      _react2.default.createElement(_reactRouter.Route, { path: 'ff15', component: function component() {
           return _react2.default.createElement(_carousel2.default, { images: _images.ff16Line });
         } }),
-      _react2.default.createElement(_reactRouter.Route, { path: 'ss15', component: function component() {
+      _react2.default.createElement(_reactRouter.Route, { path: 'ss16', component: function component() {
           return _react2.default.createElement(_carousel2.default, { images: _images.ss15Line });
         } }),
-      _react2.default.createElement(_reactRouter.Route, { path: 'ff15', component: function component() {
+      _react2.default.createElement(_reactRouter.Route, { path: 'ff16', component: function component() {
           return _react2.default.createElement(_carousel2.default, { images: _images.ff15Line });
         } }),
       _react2.default.createElement(_reactRouter.Route, { path: 'press', component: _press2.default }),
-      _react2.default.createElement(_reactRouter.Route, { path: 'shop', component: _shop2.default })
+      _react2.default.createElement(_reactRouter.Route, { path: 'shop', component: _shop2.default }),
+      _react2.default.createElement(_reactRouter.Route, { path: 'about', component: _about2.default })
     )
   );
 };
@@ -14264,7 +14264,7 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _shopify = __webpack_require__(300);
+var _shopify = __webpack_require__(136);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -14383,13 +14383,8 @@ var Splash = function (_React$Component) {
               { className: 'splash-nav' },
               _react2.default.createElement(
                 'li',
-                { onClick: this.urlPush('/main/ss17') },
+                { onClick: this.urlPush('/main/ss16') },
                 'COLLECTIONS'
-              ),
-              _react2.default.createElement(
-                'li',
-                { onClick: this.urlPush('/main/shop') },
-                'SHOP'
               ),
               _react2.default.createElement(
                 'li',
@@ -14428,7 +14423,197 @@ var Splash = function (_React$Component) {
 exports.default = Splash;
 
 /***/ }),
-/* 136 */,
+/* 136 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var shopifyOptions = {
+  "product": {
+    "variantId": "all",
+    "contents": {
+      "imgWithCarousel": false,
+      "variantTitle": false,
+      "description": false,
+      "buttonWithQuantity": false,
+      "quantity": false
+    },
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "calc(25% - 20px)",
+          "margin-left": "20px",
+          "margin-bottom": "50px"
+        }
+      },
+      "button": {
+        "background-color": "#000000",
+        "padding-left": "20px",
+        "padding-right": "20px",
+        ":hover": {
+          "background-color": "#000000"
+        },
+        "border-radius": "5px",
+        ":focus": {
+          "background-color": "#000000"
+        }
+      },
+      "variantTitle": {
+        "font-weight": "normal"
+      },
+      "description": {
+        "font-weight": "normal"
+      },
+      "price": {
+        "font-weight": "normal"
+      },
+      "compareAt": {
+        "font-family": "Helvetica Neue, sans-serif",
+        "font-weight": "normal",
+        "font-size": "11.9px"
+      }
+    }
+  },
+  "cart": {
+    "contents": {
+      "button": true
+    },
+    "styles": {
+      "button": {
+        "background-color": "#000000",
+        ":hover": {
+          "background-color": "#000000"
+        },
+        "border-radius": "5px",
+        ":focus": {
+          "background-color": "#000000"
+        }
+      },
+      "footer": {
+        "background-color": "#ffffff"
+      }
+    }
+  },
+  "modalProduct": {
+    "contents": {
+      "img": false,
+      "imgWithCarousel": true,
+      "variantTitle": false,
+      "buttonWithQuantity": true,
+      "button": false,
+      "quantity": false
+    },
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "100%",
+          "margin-left": "0px",
+          "margin-bottom": "0px"
+        }
+      },
+      "button": {
+        "background-color": "#000000",
+        "padding-left": "20px",
+        "padding-right": "20px",
+        ":hover": {
+          "background-color": "#000000"
+        },
+        "border-radius": "5px",
+        ":focus": {
+          "background-color": "#000000"
+        }
+      },
+      "variantTitle": {
+        "font-weight": "normal"
+      },
+      "description": {
+        "font-weight": "normal"
+      },
+      "price": {
+        "font-weight": "normal"
+      },
+      "compareAt": {
+        "font-family": "Helvetica Neue, sans-serif",
+        "font-weight": "normal"
+      }
+    }
+  },
+  "toggle": {
+    "styles": {
+      "toggle": {
+        "background-color": "#000000",
+        ":hover": {
+          "background-color": "#000000"
+        },
+        ":focus": {
+          "background-color": "#000000"
+        }
+      },
+      "count": {
+        "color": "#ffffff",
+        ":hover": {
+          "color": "#ffffff"
+        }
+      },
+      "iconPath": {
+        "fill": "#ffffff"
+      }
+    }
+  },
+  "productSet": {
+    "styles": {
+      "products": {
+        "@media (min-width: 601px)": {
+          "margin-left": "-20px"
+        }
+      }
+    }
+  }
+};
+
+var shopifyInit = exports.shopifyInit = function shopifyInit() {
+  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+  if (window.ShopifyBuy) {
+    if (window.ShopifyBuy.UI) {
+      ShopifyBuyInit();
+    } else {
+      loadScript();
+    }
+  } else {
+    loadScript();
+  }
+
+  function loadScript() {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = scriptURL;
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+    script.onload = ShopifyBuyInit;
+  }
+
+  function ShopifyBuyInit() {
+    var client = ShopifyBuy.buildClient({
+      domain: 'deeptailor.myshopify.com',
+      apiKey: 'ca6ac2940956aad91de4cf2b38689ead',
+      appId: '6'
+    });
+
+    ShopifyBuy.UI.onReady(client).then(function (ui) {
+      ui.createComponent('collection', {
+        id: 381014726,
+        node: document.getElementById('collection-component-424ce9c77e8'),
+        moneyFormat: '%24%7B%7Bamount%7D%7D',
+        options: shopifyOptions
+      });
+    });
+  }
+};
+
+/***/ }),
 /* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -31859,186 +32044,54 @@ module.exports = function(module) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var shopifyOptions = {
-  "product": {
-    "variantId": "all",
-    "contents": {
-      "imgWithCarousel": false,
-      "variantTitle": false,
-      "description": false,
-      "buttonWithQuantity": false,
-      "quantity": false
-    },
-    "styles": {
-      "product": {
-        "@media (min-width: 601px)": {
-          "max-width": "calc(25% - 20px)",
-          "margin-left": "20px",
-          "margin-bottom": "50px"
-        }
-      },
-      "button": {
-        "background-color": "#000000",
-        "padding-left": "20px",
-        "padding-right": "20px",
-        ":hover": {
-          "background-color": "#000000"
-        },
-        "border-radius": "5px",
-        ":focus": {
-          "background-color": "#000000"
-        }
-      },
-      "variantTitle": {
-        "font-weight": "normal"
-      },
-      "description": {
-        "font-weight": "normal"
-      },
-      "price": {
-        "font-weight": "normal"
-      },
-      "compareAt": {
-        "font-family": "Helvetica Neue, sans-serif",
-        "font-weight": "normal",
-        "font-size": "11.9px"
-      }
-    }
-  },
-  "cart": {
-    "contents": {
-      "button": true
-    },
-    "styles": {
-      "button": {
-        "background-color": "#000000",
-        ":hover": {
-          "background-color": "#000000"
-        },
-        "border-radius": "5px",
-        ":focus": {
-          "background-color": "#000000"
-        }
-      },
-      "footer": {
-        "background-color": "#ffffff"
-      }
-    }
-  },
-  "modalProduct": {
-    "contents": {
-      "img": false,
-      "imgWithCarousel": true,
-      "variantTitle": false,
-      "buttonWithQuantity": true,
-      "button": false,
-      "quantity": false
-    },
-    "styles": {
-      "product": {
-        "@media (min-width: 601px)": {
-          "max-width": "100%",
-          "margin-left": "0px",
-          "margin-bottom": "0px"
-        }
-      },
-      "button": {
-        "background-color": "#000000",
-        "padding-left": "20px",
-        "padding-right": "20px",
-        ":hover": {
-          "background-color": "#000000"
-        },
-        "border-radius": "5px",
-        ":focus": {
-          "background-color": "#000000"
-        }
-      },
-      "variantTitle": {
-        "font-weight": "normal"
-      },
-      "description": {
-        "font-weight": "normal"
-      },
-      "price": {
-        "font-weight": "normal"
-      },
-      "compareAt": {
-        "font-family": "Helvetica Neue, sans-serif",
-        "font-weight": "normal"
-      }
-    }
-  },
-  "toggle": {
-    "styles": {
-      "toggle": {
-        "background-color": "#000000",
-        ":hover": {
-          "background-color": "#000000"
-        },
-        ":focus": {
-          "background-color": "#000000"
-        }
-      },
-      "count": {
-        "color": "#ffffff",
-        ":hover": {
-          "color": "#ffffff"
-        }
-      },
-      "iconPath": {
-        "fill": "#ffffff"
-      }
-    }
-  },
-  "productSet": {
-    "styles": {
-      "products": {
-        "@media (min-width: 601px)": {
-          "margin-left": "-20px"
-        }
-      }
-    }
-  }
-};
 
-var shopifyInit = exports.shopifyInit = function shopifyInit() {
-  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
-  if (window.ShopifyBuy) {
-    if (window.ShopifyBuy.UI) {
-      ShopifyBuyInit();
-    } else {
-      loadScript();
-    }
-  } else {
-    loadScript();
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(3);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var About = function (_React$Component) {
+  _inherits(About, _React$Component);
+
+  function About(props) {
+    _classCallCheck(this, About);
+
+    return _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).call(this, props));
   }
 
-  function loadScript() {
-    var script = document.createElement('script');
-    script.async = true;
-    script.src = scriptURL;
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
-    script.onload = ShopifyBuyInit;
-  }
+  _createClass(About, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "div",
+        { className: "about-container" },
+        _react2.default.createElement(
+          "div",
+          null,
+          _react2.default.createElement("img", { src: "https://res.cloudinary.com/deeptailor/image/upload/v1490928872/prin/ss15/10014452_751979794854010_891472729328302489_o.jpg" }),
+          _react2.default.createElement(
+            "p",
+            null,
+            "Prina Bagia was born and raised in Skokie Illinois. As a child she always had an interest in art. She was always creative as a child, there was no limit to her imagination. Through out her education she had many interests in the arts as well as athletic activities, but towards the end of her senior year in high school it was time to decide on a college and a career path. She never knew she could make art a full time career until she got to Purdue University. She enrolled in the Apparel Design and Technology, and Retail Management programs, where she learned the art and craft of sewing and pattern making, and how to maintain a successful business. She took the skills she learned at Purdue University and applied them to her life, and soon PRIN was created. PRIN started off as a custom accessories line, comprising of head pieces, and jewelry.  With the strength and support of family and friends, she expanded her label to clothing. Prina started off creating one of a kind custom couture gowns, with eccentric beading and style lines. Taking deep consideration that this was her calling, she created several collections ranging from ready to wear to couture gowns. Being highlighted in several fashion shows, photo-shoots and magazine articles through out the Chicagoland Area. When creating new collections Prina is inspired by many things, her rich Indian heritage full of color and movement. The feeling and movement of music, and of course the openness and clarity of driving.  She does her best designing while driving, she soaks in the warmth of the sun, and the beat of a new song.  She combines these different aspects together to create unique pieces for her target clientele. It has been 4 years since the inception of PRIN, starting from an accessories line transforming into a custom couture garment line. We are proud to be recognized as a Chicago based brand, where the uniqueness of a designer can meet the everyday and the eccentric needs of any woman with the power to be herself."
+          )
+        )
+      );
+    }
+  }]);
 
-  function ShopifyBuyInit() {
-    var client = ShopifyBuy.buildClient({
-      domain: 'deeptailor.myshopify.com',
-      apiKey: 'ca6ac2940956aad91de4cf2b38689ead',
-      appId: '6'
-    });
+  return About;
+}(_react2.default.Component);
 
-    ShopifyBuy.UI.onReady(client).then(function (ui) {
-      ui.createComponent('collection', {
-        id: 381014726,
-        node: document.getElementById('collection-component-424ce9c77e8'),
-        moneyFormat: '%24%7B%7Bamount%7D%7D',
-        options: shopifyOptions
-      });
-    });
-  }
-};
+exports.default = About;
 
 /***/ })
 /******/ ]);

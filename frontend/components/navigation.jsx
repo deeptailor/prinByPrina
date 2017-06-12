@@ -20,13 +20,12 @@ class Navigation extends React.Component{
           <div className="navigation-main">
             <ul className="navigation-list">
               <li onClick={this.urlPush('/')}>HOME</li>
-              <li onClick={this.urlPush('/main/ss17')}>SS17</li>
-              <li onClick={this.urlPush('/main/ff16')}>FF16</li>
               <li onClick={this.urlPush('/main/ss15')}>SS15</li>
               <li onClick={this.urlPush('/main/ff15')}>FF15</li>
-              <li onClick={this.urlPush('/main/shop')}>SHOP</li>
+              <li onClick={this.urlPush('/main/ss16')}>SS16</li>
+              <li onClick={this.urlPush('/main/ff16')}>FF16</li>
               <li onClick={this.urlPush('/main/press')}>PRESS</li>
-              <li>ABOUT</li>
+              <li onClick={this.urlPush('/main/about')}>ABOUT</li>
               <li>
                 <a><i className="fa fa-facebook-official" aria-hidden="true"></i></a>
                 <a><i className="fa fa-instagram" aria-hidden="true"></i></a>
